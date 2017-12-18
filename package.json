@@ -1,0 +1,26 @@
+{
+  "name": "cbm-sherlock",
+  "version": "1.0.0",
+  "description": "A small script that uses the CallByMeaning project to deduce(🕵🏼) the number of characters that appear in the book The Adventures of Sherlock Holmes: A scandal in Bohemia.",
+  "main": "index.js",
+  "scripts": {
+    "start": "curl -Is https://call-by-meaning.herokuapp.com/ && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cbmjs/cbm-sherlock.git"
+  },
+  "author": {
+    "name": "Napoleon-Christos Oikonomou",
+    "email": "napoleonoikon@gmail.com"
+  },
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/cbmjs/cbm-sherlock/issues"
+  },
+  "homepage": "https://github.com/cbmjs/cbm-sherlock#readme",
+  "dependencies": {
+    "cbm-api": "^1.1.0",
+    "natural": "^0.5.4"
+  }
+}
