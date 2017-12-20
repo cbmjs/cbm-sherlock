@@ -1,6 +1,6 @@
 /* eslint-disable no-eval */
 
-const CallByMeaning = require('cbm-api');
+const CallByMeaning = require('@cbmjs/cbm-api');
 
 const cbm = new CallByMeaning();
 

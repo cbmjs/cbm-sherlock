@@ -7,7 +7,7 @@ A small script that uses the CallByMeaning project to deduce(🕵🏼) the numbe
 You can use the default configuration with the server running on Heroku and the database running on MLab and just use the default constructor of the cbm class:
 
 ```javascript
-const CallByMeaning = require('cbm-api');
+const CallByMeaning = require('@cbmjs/cbm-api');
 const cbm = new CallByMeaning();
 ```
 
@@ -16,7 +16,7 @@ const cbm = new CallByMeaning();
 But, if you don't want to do that, you need to run the [CallByMeaning Server](https://github.com/cbmjs/CallByMeaning) locally and replace the default constructor with your host:
 
 ```javascript
-const CallByMeaning = require('cbm-api');
+const CallByMeaning = require('@cbmjs/cbm-api');
 const cbm = new CallByMeaning('http://james.bond:007');
 ```
 

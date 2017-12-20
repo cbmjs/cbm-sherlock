@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/cbmjs/cbm-sherlock#readme",
   "dependencies": {
-    "cbm-api": "^1.1.0",
+    "@cbmjs/cbm-api": "^1.2.1",
     "natural": "^0.5.4"
   }
 }
