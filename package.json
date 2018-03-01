@@ -1,7 +1,7 @@
 {
   "name": "cbm-sherlock",
   "version": "1.0.0",
-  "description": "A small script that uses the CallByMeaning project to deduce(🕵🏼) the number of characters that appear in the book The Adventures of Sherlock Holmes: A scandal in Bohemia.",
+  "description": "A small script that uses the cbmjs project to deduce(🕵🏼) the number of characters that appear in the book The Adventures of Sherlock Holmes: A scandal in Bohemia.",
   "main": "index.js",
   "scripts": {
     "start": "curl -Is https://call-by-meaning.herokuapp.com/ && node index.js"
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/cbmjs/cbm-sherlock#readme",
   "dependencies": {
-    "@cbmjs/cbm-api": "^1.4.0",
+    "@cbmjs/cbm-api": "^1.5.0",
     "natural": "^0.5.6"
   }
 }

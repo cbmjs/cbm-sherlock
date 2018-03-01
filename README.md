@@ -1,6 +1,6 @@
 # cbm-sherlock
 
-A small script that uses the CallByMeaning project to deduce(🕵🏼) the number of characters that appear in the book The Adventures of Sherlock Holmes: A scandal in Bohemia.
+A small script that uses the cbmjs project to deduce(🕵🏼) the number of characters that appear in the book The Adventures of Sherlock Holmes: A scandal in Bohemia.
 
 ## Getting Started
 
@@ -13,7 +13,7 @@ const cbm = new CallByMeaning();
 
 > Note: this is what I'm doing here.
 
-But, if you don't want to do that, you need to run the [CallByMeaning Server](https://github.com/cbmjs/CallByMeaning) locally and replace the default constructor with your host:
+But, if you don't want to do that, you need to run the [cbmjs Server](https://github.com/cbmjs/cbm-engine) locally and replace the default constructor with your host:
 
 ```javascript
 const CallByMeaning = require('@cbmjs/cbm-api');
