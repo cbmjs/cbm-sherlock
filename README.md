@@ -1,5 +1,7 @@
 # cbm-sherlock
 
+[![license](https://img.shields.io/github/license/cbmjs/cbm-sherlock.svg?style=flat-square)](https://github.com/cbmjs/cbm-sherlock/blob/master/LICENSE)
+
 A small script that uses the cbmjs project to deduce(🕵🏼) the number of characters that appear in the book The Adventures of Sherlock Holmes: A scandal in Bohemia.
 
 ## Getting Started
@@ -26,4 +28,4 @@ Other than that, the comparison between `cbm-sherlock.js` and `pure-sherlock.js`
 
 ## License
 
-[AGPL-3.0 license](https://opensource.org/licenses/AGPL-3.0).
+AGPL-3.0 © [Napoleon-Christos Oikonomou](https://iamnapo.me)
