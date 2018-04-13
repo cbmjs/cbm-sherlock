@@ -11,7 +11,7 @@ function main() {
 	let sherlock = tokenizer.tokenize(sherlockFile.replace(/(\r\n|\n)/gm, ' ').replace(/(\r)/gm, ''));
 
 	//  2. Remove unnecessary words
-	//    a. Join concecutive words that start with Uppercase i.e ['Sherlock', 'Holmes'] -> ['Sherlock Holmes']
+	//    A. Join concecutive words that start with Uppercase i.e ['Sherlock', 'Holmes'] -> ['Sherlock Holmes']
 	const upperCase = new RegExp(/^[A-Z]/);
 	const punctuation = new RegExp(/^['!"#$%&\\'()*+,\-./:;<=>?@[\\\]^_`{|}~']/);
 	for (let i = 0; i < sherlock.length; i += 1) {
@@ -26,13 +26,15 @@ function main() {
 			}
 		}
 	}
-	//    b. Remove words that don't start with an uppercase letter but keep periods
+	//    B. Remove words that don't start with an uppercase letter but keep periods
 	sherlock = sherlock.filter(word => (upperCase.test(word) || punctuation.test(word)) && word !== 'I'); // I is a special case
 
 	//  3. Remove words that are after a punctuation point (and also the point itself)
 	const temp = [];
 	for (let i = 0; i < sherlock.length; i += 1) {
-		if (!punctuation.test(sherlock[i]) && !punctuation.test(sherlock[i - 1])) temp.push(sherlock[i]);
+		if (!punctuation.test(sherlock[i]) && !punctuation.test(sherlock[i - 1])) {
+			temp.push(sherlock[i]);
+		}
 	}
 	sherlock = temp;
 
@@ -40,13 +42,15 @@ function main() {
 	sherlock = sherlock.filter(word => word !== word.toUpperCase());
 
 	//  5. Remove dublicates
-	//    a. Things that appear more than once
+	//    A. Things that appear more than once
 	sherlock = [...new Set(sherlock)];
 
-	//    b. Things that are the same i.e 'Holmes', 'Sherlock', 'Sherlock Holmes'
+	//    B. Things that are the same i.e 'Holmes', 'Sherlock', 'Sherlock Holmes'
 	sherlock = sherlock.filter((w, i, a) => {
-		a.forEach((word) => {
-			if (word.indexOf(w) > -1 && word !== w) return word.length < w.length;
+		a.forEach(word => {
+			if (word.indexOf(w) > -1 && word !== w) {
+				return word.length < w.length;
+			}
 		});
 		return true;
 	});

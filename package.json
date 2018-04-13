@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "curl -Is https://call-by-meaning.herokuapp.com/ && node index.js",
-    "test": "eslint ."
+    "test": "xo"
   },
   "repository": "github:cbmjs/cbm-sherlock",
   "author": {
@@ -22,15 +22,10 @@
     "node": ">=9"
   },
   "dependencies": {
-    "@cbmjs/cbm-api": "^1.6.0",
+    "@cbmjs/cbm-api": "^1.6.1",
     "natural": "^0.5.6"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.10.0",
-    "eslint-plugin-jest": "^21.15.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0"
+    "xo": "^0.20.3"
   }
 }
