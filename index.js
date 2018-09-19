@@ -6,7 +6,7 @@ console.log('pure-sherlock returned:', pure());
 	try {
 		const res = await cbm();
 		console.log(`cbm-sherlock returned: ${res}`);
-	} catch (err) {
-		console.error(`cbm-sherlock returned: ${err}`);
+	} catch (error) {
+		console.error(`cbm-sherlock returned: ${error}`);
 	}
 })();
