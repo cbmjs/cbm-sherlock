@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@cbmjs/cbm-api": "^1.6.1",
-    "natural": "^0.6.1"
+    "natural": "^0.6.2"
   },
   "devDependencies": {
     "xo": "^0.23.0"
