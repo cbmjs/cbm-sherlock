@@ -1786,9 +1786,9 @@ natural@^0.5.6:
   optionalDependencies:
     webworker-threads ">=0.6.2"
 
-natural@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/natural/-/natural-0.6.2.tgz#4f372d0d18d9a833986637f06c603247b36fb2e3"
+natural@^0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/natural/-/natural-0.6.3.tgz#62f56db82fbfddcf9e1f5810c5e39135fdbc1355"
   dependencies:
     afinn-165 "^1.0.2"
     apparatus "^0.0.10"
