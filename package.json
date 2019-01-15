@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "curl -Is https://call-by-meaning.herokuapp.com/ && node index.js",
-    "test": "xo"
+    "test": "eslint . --fix"
   },
   "repository": "github:cbmjs/cbm-sherlock",
   "author": {
@@ -26,6 +26,12 @@
     "natural": "^0.6.3"
   },
   "devDependencies": {
-    "xo": "^0.23.0"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-iamnapo": "^1.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.3"
   }
 }
