@@ -1,37 +1,39 @@
 {
-  "name": "cbm-sherlock",
-  "version": "1.0.0",
-  "description": "A small script that uses the cbmjs project to deduce(🕵🏼) the number of characters that appear in the book The Adventures of Sherlock Holmes: A scandal in Bohemia.",
-  "homepage": "https://github.com/cbmjs/cbm-sherlock#readme",
-  "bugs": {
-    "url": "https://github.com/cbmjs/cbm-sherlock/issues"
-  },
-  "repository": "github:cbmjs/cbm-sherlock",
-  "license": "AGPL-3.0",
-  "author": {
-    "name": "Napoleon-Christos Oikonomou",
-    "email": "Napoleonoikon@gmail.com",
-    "url": "https://iamnapo.me"
-  },
-  "main": "index.js",
-  "scripts": {
-    "start": "curl -Is https://call-by-meaning.herokuapp.com/ && node index.js",
-    "test": "eslint . --fix"
-  },
-  "dependencies": {
-    "@cbmjs/cbm-api": "^1.7.2",
-    "natural": "^0.6.3"
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-iamnapo": "^1.0.4",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0"
-  },
-  "engines": {
-    "node": ">=10"
-  }
+	"name": "cbm-sherlock",
+	"version": "1.0.0",
+	"description": "A small script that uses the cbmjs project to deduce(🕵🏼) the number of characters that appear in the book The Adventures of Sherlock Holmes: A scandal in Bohemia.",
+	"homepage": "https://github.com/cbmjs/cbm-sherlock#readme",
+	"bugs": {
+		"url": "https://github.com/cbmjs/cbm-sherlock/issues"
+	},
+	"repository": "github:cbmjs/cbm-sherlock",
+	"license": "AGPL-3.0",
+	"author": {
+		"name": "Napoleon-Christos Oikonomou",
+		"email": "Napoleonoikon@gmail.com",
+		"url": "https://iamnapo.me"
+	},
+	"main": "index.js",
+	"scripts": {
+		"lint": "eslint .",
+		"start": "curl -Is https://call-by-meaning.herokuapp.com/ && node index.js",
+		"test": "yarn lint"
+	},
+	"dependencies": {
+		"@cbmjs/cbm-api": "^1.8.0",
+		"natural": "^0.6.3"
+	},
+	"devDependencies": {
+		"eslint": "^6.8.0",
+		"eslint-config-airbnb": "^18.0.1",
+		"eslint-config-iamnapo": "^2.2.0",
+		"eslint-plugin-import": "^2.20.1",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-react": "^7.18.3",
+		"eslint-plugin-react-hooks": "^2.5.0",
+		"eslint-plugin-unicorn": "^16.1.1"
+	},
+	"engines": {
+		"node": ">=10"
+	}
 }

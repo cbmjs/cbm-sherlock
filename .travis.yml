@@ -1,9 +1,0 @@
-sudo: false
-os:
-  - osx
-language: node_js
-node_js:
-  - node
-cache: npm
-notifications:
-  email: false
