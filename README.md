@@ -23,7 +23,3 @@ const cbm = new CallByMeaning("https://james.bond:007");
 ```
 
 Other than that, the comparison between `cbm-sherlock.js` and `pure-sherlock.js` is pretty self-explanatory.
-
-## License
-
-AGPL-3.0 © [Napoleon-Christos Oikonomou](https://iamnapo.me)
