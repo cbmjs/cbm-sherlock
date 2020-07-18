@@ -21,6 +21,7 @@
 	},
 	"resolutions": {
 		"acorn": "^7.1.1",
+		"lodash": "^4.17.19",
 		"minimist": "^1.2.3"
 	},
 	"dependencies": {
@@ -28,14 +29,10 @@
 		"natural": "^2.1.5"
 	},
 	"devDependencies": {
-		"eslint": "^7.0.0",
-		"eslint-config-airbnb": "^18.1.0",
-		"eslint-config-iamnapo": "^4.0.0",
-		"eslint-plugin-import": "^2.20.2",
-		"eslint-plugin-jsx-a11y": "^6.2.3",
-		"eslint-plugin-react": "^7.20.0",
-		"eslint-plugin-react-hooks": "^4.0.2",
-		"eslint-plugin-unicorn": "^20.0.0"
+		"eslint": "^7.4.0",
+		"eslint-config-iamnapo": "^6.0.3",
+		"eslint-plugin-import": "^2.22.0",
+		"eslint-plugin-unicorn": "^21.0.0"
 	},
 	"engines": {
 		"node": ">=12"

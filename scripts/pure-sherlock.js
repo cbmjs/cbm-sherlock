@@ -1,4 +1,5 @@
 const fs = require("fs");
+
 const natural = require("natural");
 
 const tokenizer = new natural.WordPunctTokenizer();
