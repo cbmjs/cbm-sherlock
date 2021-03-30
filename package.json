@@ -17,23 +17,17 @@
 	"scripts": {
 		"lint": "eslint .",
 		"start": "curl -Is https://call-by-meaning.herokuapp.com/ && node index.js",
-		"test": "yarn lint"
-	},
-	"resolutions": {
-		"acorn": "^7.1.1",
-		"lodash": "^4.17.19",
-		"minimist": "^1.2.3"
+		"test": "npm run lint"
 	},
 	"dependencies": {
-		"@cbmjs/cbm-api": "^1.9.1",
-		"acorn": "^7.1.1",
-		"natural": "^2.1.5"
+		"@cbmjs/cbm-api": "^1.9.3",
+		"natural": "^5.0.2"
 	},
 	"devDependencies": {
-		"eslint": "^7.6.0",
-		"eslint-config-iamnapo": "^7.0.0",
-		"eslint-plugin-import": "^2.22.0",
-		"eslint-plugin-unicorn": "^21.0.0"
+		"eslint": "^7.23.0",
+		"eslint-config-iamnapo": "^13.0.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-unicorn": "^29.0.0"
 	},
 	"engines": {
 		"node": ">=12"

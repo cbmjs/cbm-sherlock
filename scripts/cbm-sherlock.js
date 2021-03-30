@@ -16,14 +16,17 @@ async function main() {
 	const capitalize = eval((await cbm.call("string", null, "string", "capitalized", true)).body);
 	const punctuation = new RegExp(/^[!"#$%&'()*+,./:;<=>?@[\\\]^_`{|}~-]/);
 	for (let i = 0; i < sherlock.length - 2; i += 1) {
-		if (sherlock[i] === capitalize(sherlock[i]) && !punctuation.test(sherlock[i])) {
-			if (sherlock[i + 1] === capitalize(sherlock[i + 1]) && !punctuation.test(sherlock[i + 1])) {
-				sherlock[i] += " ".concat(sherlock[i + 1]);
-				sherlock[i + 1] = sherlock[i + 1].toLowerCase();
-				if (sherlock[i + 2] === capitalize(sherlock[i + 2]) && !punctuation.test(sherlock[i + 2])) {
-					sherlock[i] += " ".concat(sherlock[i + 2]);
-					sherlock[i + 2] = sherlock[i + 2].toLowerCase();
-				}
+		if (
+			sherlock[i] === capitalize(sherlock[i])
+			&& !punctuation.test(sherlock[i])
+			&& sherlock[i + 1] === capitalize(sherlock[i + 1])
+			&& !punctuation.test(sherlock[i + 1])
+		) {
+			sherlock[i] += " ".concat(sherlock[i + 1]);
+			sherlock[i + 1] = sherlock[i + 1].toLowerCase();
+			if (sherlock[i + 2] === capitalize(sherlock[i + 2]) && !punctuation.test(sherlock[i + 2])) {
+				sherlock[i] += " ".concat(sherlock[i + 2]);
+				sherlock[i + 2] = sherlock[i + 2].toLowerCase();
 			}
 		}
 	}
@@ -48,12 +51,11 @@ async function main() {
 	sherlock = (await cbm.call("array", null, [JSON.stringify(sherlock)], "array", "unique")).body;
 	//    B. Things that are the "same" i.e 'Holmes', 'Sherlock', 'Sherlock Holmes'
 	sherlock = sherlock.filter((w, i, a) => {
-		a.forEach((word) => {
+		for (const word of a) {
 			if (word.includes(w) && word !== w) {
 				return word.length < w.length;
 			}
-			return null;
-		});
+		}
 		return true;
 	});
 
@@ -68,7 +70,7 @@ async function main() {
 
 	//  *7. Write them to a file
 	const writeFile = eval((await cbm.call(["file", "mode"], [null, "write"], "file", null, true)).body);
-	writeFile(sherlock, __dirname.concat("/../results/cbm.txt"));
+	writeFile(String(sherlock), `${__dirname}/../results/cbm.txt`);
 
 	return "Done!";
 }
