@@ -1,11 +1,13 @@
-/* eslint-disable no-eval */
-const CallByMeaning = require("@cbmjs/cbm-api");
+import { fileURLToPath } from "node:url";
+import { dirname } from "node:path";
+import CallByMeaning from "@cbmjs/cbm-api";
+import requireFromString from "require-from-string";
 
 const cbm = new CallByMeaning();
 
-async function main() {
+export default async function main() {
 	//  *0. Read the file
-	const readFile = eval((await cbm.call(["file", "mode"], [null, "read"], "file", null, true)).body);
+	const readFile = requireFromString((await cbm.call(["file", "mode"], [null, "read"], "file", null, true)).body);
 	const sherlockFile = readFile("./lib/sherlock.txt");
 
 	//  *1. Create an array containing every word
@@ -13,7 +15,7 @@ async function main() {
 
 	//  *2. Remove unnecessary words
 	//    ~*A. Join concecutive words that start with Uppercase i.e ['Sherlock', 'Holmes'] -> ['Sherlock Holmes']
-	const capitalize = eval((await cbm.call("string", null, "string", "capitalized", true)).body);
+	const capitalize = requireFromString((await cbm.call("string", null, "string", "capitalized", true)).body);
 	const punctuation = new RegExp(/^[!"#$%&'()*+,./:;<=>?@[\\\]^_`{|}~-]/);
 	for (let i = 0; i < sherlock.length - 2; i += 1) {
 		if (
@@ -69,10 +71,8 @@ async function main() {
 	).body;
 
 	//  *7. Write them to a file
-	const writeFile = eval((await cbm.call(["file", "mode"], [null, "write"], "file", null, true)).body);
-	writeFile(String(sherlock), `${__dirname}/../results/cbm.txt`);
+	const writeFile = requireFromString((await cbm.call(["file", "mode"], [null, "write"], "file", null, true)).body);
+	writeFile(String(sherlock), `${dirname(fileURLToPath(import.meta.url))}/../results/cbm.txt`);
 
 	return "Done!";
 }
-
-module.exports = main;

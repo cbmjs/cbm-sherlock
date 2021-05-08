@@ -1,5 +1,5 @@
-const pure = require("./scripts/pure-sherlock");
-const cbm = require("./scripts/cbm-sherlock");
+import pure from "./scripts/pure-sherlock.js";
+import cbm from "./scripts/cbm-sherlock.js";
 
 console.log("pure-sherlock returned:", pure());
 (async () => {

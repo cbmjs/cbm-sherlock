@@ -13,21 +13,23 @@
 		"email": "Napoleonoikon@gmail.com",
 		"url": "https://iamnapo.me"
 	},
-	"main": "index.js",
+	"type": "module",
+	"exports": "./index.js",
 	"scripts": {
 		"lint": "eslint .",
 		"start": "curl -Is https://call-by-meaning.herokuapp.com/ && node index.js",
 		"test": "npm run lint"
 	},
 	"dependencies": {
-		"@cbmjs/cbm-api": "^1.9.3",
-		"natural": "^5.0.2"
+		"@cbmjs/cbm-api": "^1.10.0",
+		"natural": "^5.0.3",
+		"require-from-string": "^2.0.2"
 	},
 	"devDependencies": {
-		"eslint": "^7.23.0",
-		"eslint-config-iamnapo": "^13.0.0",
+		"eslint": "^7.26.0",
+		"eslint-config-iamnapo": "^14.3.1",
 		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-unicorn": "^29.0.0"
+		"eslint-plugin-unicorn": "^31.0.0"
 	},
 	"engines": {
 		"node": ">=12"

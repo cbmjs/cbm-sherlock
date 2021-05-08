@@ -1,10 +1,11 @@
-const fs = require("fs");
-
-const natural = require("natural");
+import fs from "node:fs";
+import { fileURLToPath } from "node:url";
+import { dirname } from "node:path";
+import natural from "natural";
 
 const tokenizer = new natural.WordPunctTokenizer();
 
-function main() {
+export default function main() {
 	//  0. Read the file
 	const sherlockFile = fs.readFileSync("./lib/sherlock.txt", "utf8");
 
@@ -16,7 +17,12 @@ function main() {
 	const upperCase = new RegExp(/^[A-Z]/);
 	const punctuation = new RegExp(/^[!"#$%&'()*+,./:;<=>?@[\\\]^_`{|}~-]/);
 	for (let i = 0; i < sherlock.length; i += 1) {
-		if (upperCase.test(sherlock[i]) && !punctuation.test(sherlock[i]) && upperCase.test(sherlock[i + 1]) && !punctuation.test(sherlock[i + 1])) {
+		if (
+			upperCase.test(sherlock[i])
+			&& !punctuation.test(sherlock[i])
+			&& upperCase.test(sherlock[i + 1])
+			&& !punctuation.test(sherlock[i + 1])
+		) {
 			sherlock[i] += " ".concat(sherlock[i + 1]);
 			sherlock[i + 1] = sherlock[i + 1].toLowerCase();
 			if (upperCase.test(sherlock[i + 2]) && !punctuation.test(sherlock[i + 2])) {
@@ -59,11 +65,9 @@ function main() {
 
 	//  7. Write them to a file
 	try {
-		fs.writeFileSync(`${__dirname}/../results/pure.txt`, String(sherlock), ["utf8", 0o666, "w+"]);
+		fs.writeFileSync(`${dirname(fileURLToPath(import.meta.url))}/../results/pure.txt`, String(sherlock), ["utf8", 0o666, "w+"]);
 		return "Done!";
 	} catch (error) {
 		return String(error);
 	}
 }
-
-module.exports = main;
