@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname } from "node:path";
+
 import natural from "natural";
 
 const tokenizer = new natural.WordPunctTokenizer();
