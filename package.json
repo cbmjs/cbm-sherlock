@@ -20,16 +20,17 @@
 		"start": "curl -Is https://call-by-meaning.herokuapp.com/ && node index.js",
 		"test": "npm run lint"
 	},
+	"eslintConfig": {
+		"extends": "iamnapo"
+	},
 	"dependencies": {
 		"@cbmjs/cbm-api": "^1.10.0",
-		"natural": "^5.0.5",
+		"natural": "^5.1.13",
 		"require-from-string": "^2.0.2"
 	},
 	"devDependencies": {
-		"eslint": "^7.32.0",
-		"eslint-config-iamnapo": "^16.1.0",
-		"eslint-plugin-import": "^2.24.1",
-		"eslint-plugin-unicorn": "^35.0.0"
+		"eslint": "^8.12.0",
+		"eslint-config-iamnapo": "^24.0.0"
 	},
 	"engines": {
 		"node": ">=12"

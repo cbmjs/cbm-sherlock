@@ -15,8 +15,8 @@ export default function main() {
 
 	//  2. Remove unnecessary words
 	//    A. Join concecutive words that start with Uppercase i.e ['Sherlock', 'Holmes'] -> ['Sherlock Holmes']
-	const upperCase = new RegExp(/^[A-Z]/);
-	const punctuation = new RegExp(/^[!"#$%&'()*+,./:;<=>?@[\\\]^_`{|}~-]/);
+	const upperCase = /^[A-Z]/;
+	const punctuation = /^[!"#$%&'()*+,./:;<=>?@[\\\]^_`{|}~-]/;
 	for (let i = 0; i < sherlock.length; i += 1) {
 		if (
 			upperCase.test(sherlock[i])
@@ -32,6 +32,7 @@ export default function main() {
 			}
 		}
 	}
+
 	//    B. Remove words that don't start with an uppercase letter but keep periods
 	sherlock = sherlock.filter((word) => (upperCase.test(word) || punctuation.test(word)) && word !== "I"); // I is a special case
 
@@ -42,6 +43,7 @@ export default function main() {
 			temp.push(sherlock[i]);
 		}
 	}
+
 	sherlock = temp;
 
 	//  4. Remove words that are in ALL CAPS
@@ -58,6 +60,7 @@ export default function main() {
 				return word.length < w.length;
 			}
 		}
+
 		return true;
 	});
 
