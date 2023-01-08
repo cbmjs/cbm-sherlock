@@ -17,22 +17,22 @@
 	"exports": "./index.js",
 	"scripts": {
 		"lint": "eslint .",
-		"start": "curl -Is https://call-by-meaning.herokuapp.com/ && node index.js",
+		"start": "curl -Is https://call-by-meaning.onrender.com/ && node index.js",
 		"test": "npm run lint"
 	},
 	"eslintConfig": {
 		"extends": "iamnapo"
 	},
 	"dependencies": {
-		"@cbmjs/cbm-api": "^1.10.0",
-		"natural": "^5.1.13",
+		"@cbmjs/cbm-api": "^2.0.0",
+		"natural": "^6.1.2",
 		"require-from-string": "^2.0.2"
 	},
 	"devDependencies": {
-		"eslint": "^8.12.0",
-		"eslint-config-iamnapo": "^24.0.0"
+		"eslint": "^8.31.0",
+		"eslint-config-iamnapo": "^28.0.0"
 	},
 	"engines": {
-		"node": ">=12"
+		"node": ">=16"
 	}
 }

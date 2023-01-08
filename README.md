@@ -1,12 +1,12 @@
 # cbm-sherlock
 
-[![build](https://img.shields.io/github/workflow/status/cbmjs/cbm-sherlock/ci?style=for-the-badge&logo=github&label=)](https://github.com/cbmjs/cbm-sherlock/actions)
+[![build](https://badges.iamnapo.me/ci/cbmjs/cbm-sherlock)](https://github.com/cbmjs/cbm-sherlock/actions)
 
 A small script that uses the cbmjs project to deduce(🕵🏼) the number of characters that appear in the book The Adventures of Sherlock Holmes: A scandal in Bohemia.
 
 ## Getting Started
 
-You can use the default configuration with the server running on Heroku and the database running on MLab and just use the default constructor of the cbm class:
+You can use the default configuration with the server running on Render.com and the database running on Mongo Atlas and just use the default constructor of the cbm class:
 
 ```javascript
 import CallByMeaning from "@cbmjs/cbm-api";

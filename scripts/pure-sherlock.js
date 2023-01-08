@@ -11,7 +11,7 @@ export default function main() {
 	const sherlockFile = fs.readFileSync("./lib/sherlock.txt", "utf8");
 
 	//  1. Create an array containing every word
-	let sherlock = tokenizer.tokenize(sherlockFile.replace(/(\r\n|\n)/gm, " ").replace(/(\r)/gm, ""));
+	let sherlock = tokenizer.tokenize(sherlockFile.replaceAll("\n", " "));
 
 	//  2. Remove unnecessary words
 	//    A. Join concecutive words that start with Uppercase i.e ['Sherlock', 'Holmes'] -> ['Sherlock Holmes']
