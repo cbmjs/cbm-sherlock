@@ -25,12 +25,12 @@
 	},
 	"dependencies": {
 		"@cbmjs/cbm-api": "^2.0.0",
-		"natural": "^6.1.2",
+		"natural": "^6.2.0",
 		"require-from-string": "^2.0.2"
 	},
 	"devDependencies": {
-		"eslint": "^8.31.0",
-		"eslint-config-iamnapo": "^28.0.0"
+		"eslint": "^8.34.0",
+		"eslint-config-iamnapo": "^28.2.0"
 	},
 	"engines": {
 		"node": ">=16"
